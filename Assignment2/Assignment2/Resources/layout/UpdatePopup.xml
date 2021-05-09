@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:orientation="vertical"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"
+    android:padding="16dp">  
+      
+    <TextView
+        android:hint="Name and Surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtId"/>
+    <EditText
+        android:hint="Name and Surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtName"/>
+    <EditText
+        android:hint="Date of Birth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtDate"
+        android:focusableInTouchMode="true"
+        android:cursorVisible="false"
+        android:focusable="false"/>
+    <EditText
+        android:hint="Credit"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtBalance"/>
+</LinearLayout>  
