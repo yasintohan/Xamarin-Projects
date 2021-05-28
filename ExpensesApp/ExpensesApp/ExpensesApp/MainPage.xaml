@@ -23,7 +23,7 @@
                 NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
-            <Image Source="settings" HorizontalOptions="End">
+            <Image Margin="10" Source="settings" HorizontalOptions="End">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer
                 Tapped="OnImageSettingsTapped"
@@ -87,7 +87,8 @@
         </Grid>
 
         <StackLayout Padding="10,0,10,10" Spacing="10">
-           
+
+
             <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Horizontal">
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <Frame Style="{StaticResource ChipFrame}">
@@ -101,9 +102,6 @@
                     </Frame>
                     <Frame Style="{StaticResource ChipFrame}">
                         <Label Style="{StaticResource ChipLabel}" Text="Sterlin" />
-                    </Frame>
-                    <Frame Style="{StaticResource ChipFrame}">
-                        <Label Style="{StaticResource ChipLabel}" Text="Russian Ruble" />
                     </Frame>
                 </StackLayout>
             </ScrollView>
@@ -132,10 +130,7 @@
                                       Title="Electric 3"
                                       Cost="1500.0"
                                       Currency="USD" />
-                    <models:ExpenseModel Type="bill.png"
-                                      Title="Electric 5"
-                                      Cost="1040.0"
-                                      Currency="USD" />
+
                     
                    
                     

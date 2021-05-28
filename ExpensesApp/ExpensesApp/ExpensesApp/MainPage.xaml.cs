@@ -45,7 +45,7 @@ namespace ExpensesApp
         {
             try
             {
-                await Navigation.PushModalAsync(new AddingPage(), true);
+                await Navigation.PushModalAsync(new SettingsPage(), true);
             }
             catch (Exception ex)
             {

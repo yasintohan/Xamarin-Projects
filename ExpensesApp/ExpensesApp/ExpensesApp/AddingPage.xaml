@@ -30,14 +30,22 @@
                 <Entry x:Name="titleEntry" Placeholder="Title" />
                 <Entry x:Name="costEntry" Placeholder="Cost" />
 
-                <StackLayout>
-                    <RadioButton Content="Cat" />
-                    <RadioButton Content="Dog" />
-                    <RadioButton Content="Elephant" />
-                    <RadioButton Content="Monkey"
+                <StackLayout RadioButtonGroup.GroupName="types"
+                 Orientation="Vertical">
+                    <RadioButton Content="Bill" />
+                    <RadioButton Content="Rent" />
+                    <RadioButton Content="Other"
                  IsChecked="true" />
                 </StackLayout>
 
+                <StackLayout RadioButtonGroup.GroupName="currencies"
+                 Orientation="Horizontal">
+                    <RadioButton Content="TRY" />
+                    <RadioButton Content="USD" />
+                    <RadioButton Content="EUR" />
+                    <RadioButton Content="GBP"
+                 IsChecked="true" />
+                </StackLayout>
 
                 <Button Margin="10" x:Name="deleteBtn" Text="Delete" />
 
