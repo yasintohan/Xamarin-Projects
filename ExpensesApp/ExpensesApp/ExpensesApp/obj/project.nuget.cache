@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "Aed/8dlNktEKqgn5k0eLDpvDUGyIYzdu3nx5xN3bjzVABli0p9M5vKzJ4TrWypnn0AtMqFcLhGDEmTbxVq8UsQ==",
+  "success": true,
+  "projectFilePath": "C:\\xamarin_projects\\ExpensesApp\\ExpensesApp\\ExpensesApp\\ExpensesApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rıdvan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Rıdvan\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Rıdvan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Rıdvan\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\Rıdvan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Rıdvan\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Rıdvan\\.nuget\\packages\\xam.plugins.forms.imagecircle\\3.0.0.5\\xam.plugins.forms.imagecircle.3.0.0.5.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\Rıdvan\\.nuget\\packages\\xamarin.forms.debugrainbows\\1.1.4\\xamarin.forms.debugrainbows.1.1.4.nupkg.sha512",
+    "C:\\Users\\Rıdvan\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
+  ],
+  "logs": []
+}

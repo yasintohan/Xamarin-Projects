@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ExpensesApp.Models
+{
+    public class ExpenseModel
+    {
+
+        public string Type { get; set; }
+        public string Title { get; set; }
+        public string Cost { get; set; }
+        public string Currency { get; set; }
+
+    }
+}

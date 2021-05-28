@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage  x:Class="ExpensesApp.AddingPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:panCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:rainbows="clr-namespace:Xamarin.Forms.DebugRainbows;assembly=Xamarin.Forms.DebugRainbows"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             rainbows:DebugRainbow.IsDebug="False">
+    <StackLayout VerticalOptions="FillAndExpand">
+        <StackLayout x:Name="header"
+                     Padding="20,30,20,30"
+                     Orientation="Horizontal"
+                     Spacing="20">
+            <Image Source="back" />
+            <Label Style="{StaticResource AuthorLabel}"
+                   Text="back"
+                   HorizontalOptions="FillAndExpand" />
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Handle_Tapped" />
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+        <panCake:PancakeView x:Name="cakeDetail"
+                             Margin="0"
+                             Padding="50"
+                             BackgroundColor="#ffffff"
+                             CornerRadius="30,30,0,0"
+                             VerticalOptions="FillAndExpand"
+                             >
+            <StackLayout Spacing="10" VerticalOptions="FillAndExpand">
+                <Entry x:Name="titleEntry" Placeholder="Title" />
+                <Entry x:Name="costEntry" Placeholder="Cost" />
+
+                <StackLayout>
+                    <RadioButton Content="Cat" />
+                    <RadioButton Content="Dog" />
+                    <RadioButton Content="Elephant" />
+                    <RadioButton Content="Monkey"
+                 IsChecked="true" />
+                </StackLayout>
+
+
+                <Button Margin="10" x:Name="deleteBtn" Text="Delete" />
+
+            </StackLayout>
+        </panCake:PancakeView>
+    </StackLayout>
+</ContentPage>
