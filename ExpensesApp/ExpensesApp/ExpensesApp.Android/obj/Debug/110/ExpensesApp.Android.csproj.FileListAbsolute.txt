@@ -589,3 +589,4 @@ C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Debug\110\st
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Debug\110\android\assets\Newtonsoft.Json.dll

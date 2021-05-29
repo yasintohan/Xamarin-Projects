@@ -4,5 +4,6 @@
     <SelectedDevice>pixel_2_oreo_8_1_-_api_27_1</SelectedDevice>
     <ActiveDebugProfile>pixel_2_oreo_8_1_-_api_27_1</ActiveDebugProfile>
     <DefaultDevice>pixel_2_oreo_8_1_-_api_27_1</DefaultDevice>
+    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

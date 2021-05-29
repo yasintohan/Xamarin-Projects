@@ -25,44 +25,44 @@
 	.section	.rodata.map_aname.4,"aMS",@progbits,1
 	.type	.L.map_aname.4, @object
 .L.map_aname.4:
-	.asciz	"Mono.Android"
-	.size	.L.map_aname.4, 13
+	.asciz	"Xamarin.AndroidX.Activity"
+	.size	.L.map_aname.4, 26
 
 	.section	.rodata.map_aname.5,"aMS",@progbits,1
 	.type	.L.map_aname.5, @object
 .L.map_aname.5:
-	.asciz	"Xamarin.AndroidX.Activity"
-	.size	.L.map_aname.5, 26
+	.asciz	"Xamarin.AndroidX.AppCompat.AppCompatResources"
+	.size	.L.map_aname.5, 46
 
 	.section	.rodata.map_aname.6,"aMS",@progbits,1
 	.type	.L.map_aname.6, @object
 .L.map_aname.6:
-	.asciz	"Xamarin.AndroidX.AppCompat.AppCompatResources"
-	.size	.L.map_aname.6, 46
+	.asciz	"Xamarin.AndroidX.Core"
+	.size	.L.map_aname.6, 22
 
 	.section	.rodata.map_aname.7,"aMS",@progbits,1
 	.type	.L.map_aname.7, @object
 .L.map_aname.7:
-	.asciz	"Xamarin.AndroidX.Core"
-	.size	.L.map_aname.7, 22
+	.asciz	"Xamarin.AndroidX.Legacy.Support.Core.UI"
+	.size	.L.map_aname.7, 40
 
 	.section	.rodata.map_aname.8,"aMS",@progbits,1
 	.type	.L.map_aname.8, @object
 .L.map_aname.8:
-	.asciz	"Xamarin.AndroidX.Legacy.Support.Core.UI"
-	.size	.L.map_aname.8, 40
+	.asciz	"Xamarin.AndroidX.CustomView"
+	.size	.L.map_aname.8, 28
 
 	.section	.rodata.map_aname.9,"aMS",@progbits,1
 	.type	.L.map_aname.9, @object
 .L.map_aname.9:
-	.asciz	"Xamarin.AndroidX.CustomView"
-	.size	.L.map_aname.9, 28
+	.asciz	"Xamarin.AndroidX.Fragment"
+	.size	.L.map_aname.9, 26
 
 	.section	.rodata.map_aname.10,"aMS",@progbits,1
 	.type	.L.map_aname.10, @object
 .L.map_aname.10:
-	.asciz	"Xamarin.AndroidX.Fragment"
-	.size	.L.map_aname.10, 26
+	.asciz	"ExpensesApp.Android"
+	.size	.L.map_aname.10, 20
 
 	.section	.rodata.map_aname.11,"aMS",@progbits,1
 	.type	.L.map_aname.11, @object
@@ -127,14 +127,14 @@
 	.section	.rodata.map_aname.21,"aMS",@progbits,1
 	.type	.L.map_aname.21, @object
 .L.map_aname.21:
-	.asciz	"ExpensesApp.Android"
-	.size	.L.map_aname.21, 20
+	.asciz	"Xamarin.AndroidX.SwipeRefreshLayout"
+	.size	.L.map_aname.21, 36
 
 	.section	.rodata.map_aname.22,"aMS",@progbits,1
 	.type	.L.map_aname.22, @object
 .L.map_aname.22:
-	.asciz	"Xamarin.AndroidX.SwipeRefreshLayout"
-	.size	.L.map_aname.22, 36
+	.asciz	"Mono.Android"
+	.size	.L.map_aname.22, 13
 
 	.section	.rodata.map_aname.23,"aMS",@progbits,1
 	.type	.L.map_aname.23, @object

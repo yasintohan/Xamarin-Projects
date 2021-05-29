@@ -28,7 +28,7 @@
                              >
             <StackLayout Spacing="10" VerticalOptions="FillAndExpand">
                 <Entry x:Name="titleEntry" Placeholder="Title" />
-                <Entry x:Name="costEntry" Placeholder="Cost" />
+                <Entry x:Name="costEntry" Placeholder="Cost" Keyboard="Numeric"/>
 
                 <StackLayout RadioButtonGroup.GroupName="types"
                  Orientation="Vertical">

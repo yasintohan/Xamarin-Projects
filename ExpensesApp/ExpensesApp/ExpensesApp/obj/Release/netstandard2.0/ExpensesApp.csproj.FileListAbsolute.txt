@@ -16,3 +16,5 @@ C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp\obj\Release\netstandard2
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp\obj\Release\netstandard2.0\ExpensesApp.dll
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp\obj\Release\netstandard2.0\ref\ExpensesApp.dll
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp\obj\Release\netstandard2.0\ExpensesApp.pdb
+C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp\obj\Release\netstandard2.0\LoginPage.xaml.g.cs
+C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp\obj\Release\netstandard2.0\RegisterPage.xaml.g.cs

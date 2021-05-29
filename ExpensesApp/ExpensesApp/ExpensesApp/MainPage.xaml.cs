@@ -1,8 +1,12 @@
-﻿using ExpensesApp.Models;
+﻿using ExpensesApp.CurrencyApi;
+using ExpensesApp.Models;
+using ExpensesApp.Services;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -14,6 +18,7 @@ namespace ExpensesApp
         public MainPage()
         {
             InitializeComponent();
+            GetCurrencies();
         }
 
         async void Handle_ItemTapped(object sender, SelectionChangedEventArgs e)
@@ -45,12 +50,39 @@ namespace ExpensesApp
         {
             try
             {
-                await Navigation.PushModalAsync(new SettingsPage(), true);
+                await Navigation.PushModalAsync(new LoginPage(), true);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        
+        async void GetCurrencies()
+        {
+            /*
+            var httpClient = new HttpClient();
+            var resultJson = await httpClient.GetStringAsync("https://api.ratesapi.io/api/latest");
+
+            nameLabel.Text = resultJson;
+
+            var resultCurrencies = JsonConvert.DeserializeObject<Currency>(resultJson);
+
+            nameLabel.Text = resultCurrencies.Base;
+            */
+
+            var content = await CurrencyService.ServiceClientInstance.GetCurrencyAsync();
+
+            if(content != null && !string.IsNullOrEmpty(content.Base))
+            {
+                nameLabel.Text = content.Base;
+            } else
+            {
+               // await App.Current.MainPage.DisplayAlert("alert", "deneme", "ok");
+            }
+                
+
         }
 
     }

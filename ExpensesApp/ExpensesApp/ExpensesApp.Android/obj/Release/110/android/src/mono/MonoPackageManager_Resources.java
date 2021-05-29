@@ -6,6 +6,7 @@ public class MonoPackageManager_Resources {
 		"ExpensesApp.dll",
 		"FormsViewGroup.dll",
 		"ImageCircle.Forms.Plugin.dll",
+		"Newtonsoft.Json.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",
 		"Xamarin.AndroidX.Annotation.Experimental.dll",

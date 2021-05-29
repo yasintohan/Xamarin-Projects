@@ -52,7 +52,8 @@
             </Grid.ColumnDefinitions>
 
             
-            <Label Grid.Row="0"
+            <Label x:Name="nameLabel"
+                    Grid.Row="0"
                    Grid.Column="0"
                    Style="{StaticResource AuthorLabel}"
                    Text="Name" />
@@ -153,6 +154,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100" />
                             <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="100" />
                         </Grid.ColumnDefinitions>
                         <Image Grid.RowSpan="4"
                                  Aspect="AspectFit" Source="{Binding Type}" />
@@ -161,10 +163,16 @@
                                 Grid.Column="1"
                                 Style="{StaticResource HeaderLabel}"
                                 Text="{Binding Title}" />
-                        <Label Grid.Row="1"
-                                Grid.Column="1"
+                        
+                        
+                        <Label Grid.Row="0"
+                                Grid.Column="2"
                                 Style="{StaticResource AuthorLabel}"
                                 Text="{Binding Cost}" />
+                        <Label Grid.Row="1"
+                                Grid.Column="2"
+                                Style="{StaticResource AuthorLabel}"
+                                Text="{Binding Currency}" />
                         
                     </Grid>
                 </DataTemplate>
