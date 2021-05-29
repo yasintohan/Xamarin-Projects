@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:panCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             x:Class="ExpensesApp.LoginPage">
+             x:Class="ExpensesApp.LoginPage"
+             BackgroundColor="#219EBC">
     <ContentPage.Content>
         <StackLayout>
             <panCake:PancakeView x:Name="cakeDetail"
-                             Margin="0"
-                             Padding="50"
+                             Margin="50,50,50,0"
+                             Padding="20"
                              BackgroundColor="#ffffff"
                              CornerRadius="30,30,0,0"
                              VerticalOptions="FillAndExpand"
@@ -23,18 +24,18 @@
                    Text="Login" 
                    />
 
-                    <Entry x:Name="mailEntry" Placeholder="Mail" />
-                    <Entry x:Name="passwordEntry" Placeholder="Password" />
+                    <Entry x:Name="loginmailEntry" Placeholder="Mail" />
+                    <Entry x:Name="loginpasswordEntry" Placeholder="Password" />
 
 
-                    <Button Margin="10" x:Name="loginBtn" Text="Login" />
+                    <Button Clicked="loginBtn_Clicked" Margin="10" x:Name="loginBtn" Text="Login" />
 
                     <StackLayout x:Name="register"
                      Padding="20,30,20,30"
                      Orientation="Vertical"
                      Spacing="20">
                         <Label 
-                                Text="Register"
+                                Text="Register now"
                                HorizontalOptions="Center"/>
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Handle_Tapped" />

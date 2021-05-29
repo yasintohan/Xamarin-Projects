@@ -28,42 +28,31 @@
                              >
             <StackLayout Spacing="10" VerticalOptions="FillAndExpand">
 
+
+       
+                <StackLayout
+                     Orientation="Horizontal"
+                     Spacing="20"  Margin="0,0,0,20">
+                    <Image Source="mail" />
+                    <Label Style="{StaticResource AuthorLabel}"
+                   Text="Mail"
+                   HorizontalOptions="FillAndExpand" x:Name="mailLabel"/>
+                </StackLayout>
+
                 <StackLayout x:Name="changeName"
                      Orientation="Horizontal"
-                     Spacing="20">
-                    <Image Source="back" />
+                     Spacing="20"
+                             Margin="0,0,0,20">
+                    <Image Source="logout" />
                     <Label Style="{StaticResource AuthorLabel}"
-                   Text="back"
+                   Text="Logout"
                    HorizontalOptions="FillAndExpand" />
                     <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Handle_Tapped" />
+                        <TapGestureRecognizer Tapped="Logout_Tapped" />
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
 
 
-                <StackLayout x:Name="changeName2"
-                     Orientation="Horizontal"
-                     Spacing="20">
-                    <Image Source="back" />
-                    <Label Style="{StaticResource AuthorLabel}"
-                   Text="back"
-                   HorizontalOptions="FillAndExpand" />
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Handle_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                </StackLayout>
-
-                <StackLayout x:Name="changeName3"
-                     Orientation="Horizontal"
-                     Spacing="20">
-                    <Image Source="back" />
-                    <Label Style="{StaticResource AuthorLabel}"
-                   Text="back"
-                   HorizontalOptions="FillAndExpand" />
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Handle_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                </StackLayout>
 
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Firebase.Auth;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,8 @@ namespace ExpensesApp
 	{
 
         private double _pageHeight;
+        public string APIkey = "AIzaSyDR6i14IaHpMZACjSf-ICBwpUmyCpC3DIo";
+
         public RegisterPage ()
 		{
 			InitializeComponent ();
@@ -37,6 +40,22 @@ namespace ExpensesApp
         async void Handle_Tapped(object sender, System.EventArgs e)
         {
             await Navigation.PopModalAsync();
+        }
+
+        private async void registerBtn_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var authProvider = new FirebaseAuthProvider(new FirebaseConfig(APIkey));
+                var auth = await authProvider.CreateUserWithEmailAndPasswordAsync(mailEntry.Text, passwordEntry.Text);
+                string gettoken = auth.FirebaseToken;
+                await App.Current.MainPage.DisplayAlert("Alert", gettoken, "Ok");
+                await Navigation.PopModalAsync();
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
+            }
         }
     }
 }

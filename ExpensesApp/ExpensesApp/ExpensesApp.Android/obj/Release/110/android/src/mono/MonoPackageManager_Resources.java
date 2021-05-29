@@ -4,6 +4,7 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "ExpensesApp.Android.dll" comes first in this list. */
 		"ExpensesApp.Android.dll",
 		"ExpensesApp.dll",
+		"Firebase.Auth.dll",
 		"FormsViewGroup.dll",
 		"ImageCircle.Forms.Plugin.dll",
 		"Newtonsoft.Json.dll",

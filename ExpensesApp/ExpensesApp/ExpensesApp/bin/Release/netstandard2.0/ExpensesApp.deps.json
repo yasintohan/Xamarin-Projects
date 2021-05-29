@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "ExpensesApp/1.0.0": {
         "dependencies": {
+          "FirebaseAuthentication.net": "3.7.1",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.1",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
@@ -19,6 +20,18 @@
         },
         "runtime": {
           "ExpensesApp.dll": {}
+        }
+      },
+      "FirebaseAuthentication.net/3.7.1": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Firebase.Auth.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -129,6 +142,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FirebaseAuthentication.net/3.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V8rIhr8rpvT8TjPJwMEbK8gX8uz5bYyTtFnzMZqEo/Tr/zPs1ycPcfqXmP3zLpTomuoZap7ER2xXrZyolcb1/g==",
+      "path": "firebaseauthentication.net/3.7.1",
+      "hashPath": "firebaseauthentication.net.3.7.1.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

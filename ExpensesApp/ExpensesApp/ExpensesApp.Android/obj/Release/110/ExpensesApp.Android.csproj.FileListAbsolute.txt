@@ -506,3 +506,6 @@ C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\android\assets\System.Data.pdb
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\android\assets\System.Xml.Linq.dll
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\android\assets\System.Xml.Linq.pdb
+C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\android\assets\Firebase.Auth.dll
+C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\logout.png
+C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\mail.png

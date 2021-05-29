@@ -44,6 +44,10 @@
       "frameworks": {
         "monoandroid11.0": {
           "dependencies": {
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[3.7.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.6.1, )"
@@ -98,6 +102,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[3.7.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

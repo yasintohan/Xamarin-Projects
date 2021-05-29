@@ -18,7 +18,7 @@ namespace ExpensesApp
         public MainPage()
         {
             InitializeComponent();
-            GetCurrencies();
+           // GetCurrencies();
         }
 
         async void Handle_ItemTapped(object sender, SelectionChangedEventArgs e)
@@ -50,7 +50,7 @@ namespace ExpensesApp
         {
             try
             {
-                await Navigation.PushModalAsync(new LoginPage(), true);
+                await Navigation.PushModalAsync(new SettingsPage(), true);
             }
             catch (Exception ex)
             {
