@@ -126,6 +126,9 @@
     <PackageReference Include="FirebaseAuthentication.net">
       <Version>3.7.1</Version>
     </PackageReference>
+    <PackageReference Include="FirebaseDatabase.net">
+      <Version>4.0.6</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
@@ -137,13 +140,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\bill.png" />
+    <BundleResource Include="Resources\Bill.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\shop.png" />
+    <BundleResource Include="Resources\Other.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\rent.png" />
+    <BundleResource Include="Resources\Rent.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\back.png" />

@@ -14312,7 +14312,7 @@ namespace ExpensesApp.Droid
 			public const int back = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int bill = 2131165280;
+			public const int Bill = 2131165280;
 			
 			// aapt resource value: 0x7F070061
 			public const int btn_checkbox_checked_mtrl = 2131165281;
@@ -14462,13 +14462,13 @@ namespace ExpensesApp.Droid
 			public const int notify_panel_notification_icon_bg = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int rent = 2131165330;
+			public const int Other = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int settings = 2131165331;
+			public const int Rent = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int shop = 2131165332;
+			public const int settings = 2131165332;
 			
 			// aapt resource value: 0x7F070095
 			public const int test_custom_background = 2131165333;

@@ -56,7 +56,6 @@ C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\mipmap-xxxhdpi\launcher_foreground.png
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\back.png
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\bill.png
-C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\shop.png
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\rent.png
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\settings.png
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\add.png
@@ -509,3 +508,7 @@ C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\android\assets\Firebase.Auth.dll
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\logout.png
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\mail.png
+C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\android\assets\Firebase.dll
+C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\android\assets\LiteDB.dll
+C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\android\assets\System.Reactive.dll
+C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\other.png

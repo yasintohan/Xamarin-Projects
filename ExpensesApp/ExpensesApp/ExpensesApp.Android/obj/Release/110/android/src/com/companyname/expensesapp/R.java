@@ -6527,9 +6527,9 @@ public final class R {
     public static final int notification_template_icon_low_bg=0x7f07008f;
     public static final int notification_tile_bg=0x7f070090;
     public static final int notify_panel_notification_icon_bg=0x7f070091;
-    public static final int rent=0x7f070092;
-    public static final int settings=0x7f070093;
-    public static final int shop=0x7f070094;
+    public static final int other=0x7f070092;
+    public static final int rent=0x7f070093;
+    public static final int settings=0x7f070094;
     public static final int test_custom_background=0x7f070095;
     public static final int tooltip_frame_dark=0x7f070096;
     public static final int tooltip_frame_light=0x7f070097;
