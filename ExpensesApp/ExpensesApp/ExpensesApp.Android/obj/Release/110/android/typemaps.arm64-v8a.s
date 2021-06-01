@@ -170,8 +170,8 @@ map_modules:
 	.zero	4
 	.xword	0
 
-	/* module_uuid: 3a6cde4f-77fa-4869-ac23-de6d76e77496 */
-	.byte	0x4f, 0xde, 0x6c, 0x3a, 0xfa, 0x77, 0x69, 0x48, 0xac, 0x23, 0xde, 0x6d, 0x76, 0xe7, 0x74, 0x96
+	/* module_uuid: 2a911c32-ef63-4395-9970-5f81884121b3 */
+	.byte	0x32, 0x1c, 0x91, 0x2a, 0x63, 0xef, 0x95, 0x43, 0x99, 0x70, 0x5f, 0x81, 0x88, 0x41, 0x21, 0xb3
 	/* entry_count */
 	.word	1
 	/* duplicate_count */
@@ -180,7 +180,7 @@ map_modules:
 	.xword	module7_managed_to_java
 	/* duplicate_map */
 	.xword	0
-	/* assembly_name: Xamarin.AndroidX.CustomView */
+	/* assembly_name: ExpensesApp.Android */
 	.xword	.L.map_aname.7
 	/* image */
 	.xword	0
@@ -190,8 +190,8 @@ map_modules:
 	.zero	4
 	.xword	0
 
-	/* module_uuid: 43acec62-097e-41e0-b76c-f135d9f96a71 */
-	.byte	0x62, 0xec, 0xac, 0x43, 0x7e, 0x09, 0xe0, 0x41, 0xb7, 0x6c, 0xf1, 0x35, 0xd9, 0xf9, 0x6a, 0x71
+	/* module_uuid: 3a6cde4f-77fa-4869-ac23-de6d76e77496 */
+	.byte	0x4f, 0xde, 0x6c, 0x3a, 0xfa, 0x77, 0x69, 0x48, 0xac, 0x23, 0xde, 0x6d, 0x76, 0xe7, 0x74, 0x96
 	/* entry_count */
 	.word	1
 	/* duplicate_count */
@@ -200,7 +200,7 @@ map_modules:
 	.xword	module8_managed_to_java
 	/* duplicate_map */
 	.xword	0
-	/* assembly_name: ExpensesApp.Android */
+	/* assembly_name: Xamarin.AndroidX.CustomView */
 	.xword	.L.map_aname.8
 	/* image */
 	.xword	0
@@ -5091,7 +5091,7 @@ map_java:
 
 	/* #449 */
 	/* module_index */
-	.word	7
+	.word	8
 	/* type_token_id */
 	.word	33554438
 	/* java_name */
@@ -8341,7 +8341,7 @@ map_java:
 
 	/* #774 */
 	/* module_index */
-	.word	8
+	.word	7
 	/* type_token_id */
 	.word	33554434
 	/* java_name */

@@ -20,7 +20,15 @@ namespace ExpensesApp
 {
     public partial class MainPage : ContentPage
     {
-        
+
+        private string baseCurrency = "TRY";
+
+        public string BaseCurrency 
+        {
+            get { return baseCurrency; } 
+            set { baseCurrency = value; }
+        }
+
         public MainPage()
         {
             GetCurrencies();
@@ -35,6 +43,7 @@ namespace ExpensesApp
         {
             try
             {
+                double totalExpense = 0;
 
                 FirebaseClient fc = new FirebaseClient("https://xamarin-expense-app-default-rtdb.firebaseio.com/");
                 var GetExpenses = (await fc
@@ -51,9 +60,25 @@ namespace ExpensesApp
 
                 CurrencyConverter currencyConverter = new CurrencyConverter();
 
-                CollectionViewExpense.ItemsSource = GetExpenses;
+                List<ExpenseModel> convertedList = new List<ExpenseModel>();
+
+                foreach (ExpenseModel model in GetExpenses)
+                {
+                    ExpenseModel newModel = new ExpenseModel
+                    {
+                        Date = model.Date,
+                        Title = model.Title,
+                        Cost = Math.Round(currencyConverter.Converter(model.Currency, baseCurrency, Convert.ToDouble(model.Cost)), 2).ToString(),
+                        Type = model.Type,
+                        Currency = baseCurrency
+                    };
+                    totalExpense += currencyConverter.Converter(model.Currency, baseCurrency, Convert.ToDouble(model.Cost));
+                    convertedList.Add(newModel);
+                }
+                expensesLabel.Text = Math.Round(totalExpense, 2) + " " + baseCurrency;
+                CollectionViewExpense.ItemsSource = convertedList;
                
-                await App.Current.MainPage.DisplayAlert("Alert", currencyConverter.Converter("TRY", "USD", Convert.ToDouble(GetExpenses.First().Cost)).ToString(), "OK");
+               
             }
             catch (Exception ex)
             {
@@ -128,6 +153,50 @@ namespace ExpensesApp
             GetInformations();
         }
 
+        private void CurrencySelector_Tapped(object sender, EventArgs e)
+        {
+            
+            var btn = (Frame)sender;
+           
 
+            switch (btn.ClassId)
+            {
+                case "TRYFrame":
+                    BaseCurrency = "TRY";
+                    ((Label)TRYFrame.Content).TextColor = Color.FromHex("#FB8500");
+                    ((Label)USDFrame.Content).TextColor = Color.Black;
+                    ((Label)EURFrame.Content).TextColor = Color.Black;
+                    ((Label)GBPFrame.Content).TextColor = Color.Black;
+                    break;
+
+                case "USDFrame":
+                    BaseCurrency = "USD";
+                    ((Label)TRYFrame.Content).TextColor = Color.Black;
+                    ((Label)USDFrame.Content).TextColor = Color.FromHex("#FB8500");
+                    ((Label)EURFrame.Content).TextColor = Color.Black;
+                    ((Label)GBPFrame.Content).TextColor = Color.Black;
+                    break;
+
+                case "EURFrame":
+                    BaseCurrency = "EUR";
+                    ((Label)TRYFrame.Content).TextColor = Color.Black;
+                    ((Label)USDFrame.Content).TextColor = Color.Black;
+                    ((Label)EURFrame.Content).TextColor = Color.FromHex("#FB8500");
+                    ((Label)GBPFrame.Content).TextColor = Color.Black;
+                    break;
+
+                case "GBPFrame":
+                    BaseCurrency = "GBP";
+                    ((Label)TRYFrame.Content).TextColor = Color.Black;
+                    ((Label)USDFrame.Content).TextColor = Color.Black;
+                    ((Label)EURFrame.Content).TextColor = Color.Black;
+                    ((Label)GBPFrame.Content).TextColor = Color.FromHex("#FB8500");
+                    break;
+
+                default:
+                    break;
+            }
+            GetInformations();
+        }
     }
 }

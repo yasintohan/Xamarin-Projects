@@ -224,16 +224,16 @@ module6_managed_to_java:
 	.type	module7_managed_to_java, @object
 	.p2align	2
 module7_managed_to_java:
-	.word	33554438
-	.word	449
+	.word	33554434
+	.word	774
 	.size	module7_managed_to_java, 8
 
 	.section	.rodata.module8_managed_to_java,"a",@progbits
 	.type	module8_managed_to_java, @object
 	.p2align	2
 module8_managed_to_java:
-	.word	33554434
-	.word	774
+	.word	33554438
+	.word	449
 	.size	module8_managed_to_java, 8
 
 	.section	.rodata.module9_managed_to_java,"a",@progbits

@@ -43,14 +43,14 @@
 	.section	.rodata.map_aname.7,"aMS",@progbits,1
 	.type	.L.map_aname.7, @object
 .L.map_aname.7:
-	.asciz	"Xamarin.AndroidX.CustomView"
-	.size	.L.map_aname.7, 28
+	.asciz	"ExpensesApp.Android"
+	.size	.L.map_aname.7, 20
 
 	.section	.rodata.map_aname.8,"aMS",@progbits,1
 	.type	.L.map_aname.8, @object
 .L.map_aname.8:
-	.asciz	"ExpensesApp.Android"
-	.size	.L.map_aname.8, 20
+	.asciz	"Xamarin.AndroidX.CustomView"
+	.size	.L.map_aname.8, 28
 
 	.section	.rodata.map_aname.9,"aMS",@progbits,1
 	.type	.L.map_aname.9, @object

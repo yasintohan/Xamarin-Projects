@@ -16,7 +16,7 @@
 
 	/* 1: ExpensesApp.dll */
 	/* uncompressed_file_size */
-	.long	74240
+	.long	76288
 	/* loaded */
 	.byte	0
 	/* data */

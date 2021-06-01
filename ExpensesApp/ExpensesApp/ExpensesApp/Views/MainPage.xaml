@@ -60,7 +60,7 @@
             </Grid.ColumnDefinitions>
 
             
-            <Label x:Name="nameLabel"
+            <Label 
                     Grid.Row="0"
                    Grid.Column="0"
                    Style="{StaticResource AuthorLabel}"
@@ -73,7 +73,9 @@
                    CornerRadius="5"
                    HasShadow="False"
                    HorizontalOptions="Start">
-                <Label Style="{StaticResource AuthorLabel}"
+                <Label 
+                       x:Name="nameLabel"
+                       Style="{StaticResource AuthorLabel}"
                        Text="Mr. Yasin"
                        TextColor="#FFFFFF" />
             </Frame>
@@ -89,28 +91,43 @@
                    CornerRadius="5"
                    HasShadow="False"
                    HorizontalOptions="Start">
-                <Label Style="{StaticResource AuthorLabel}"
+                <Label 
+                       x:Name="expensesLabel"    
+                       Style="{StaticResource AuthorLabel}"
                        Text="10000000 USD"
                        TextColor="#FFFFFF" />
             </Frame>
         </Grid>
 
         
-        <StackLayout Padding="10,0,10,10" Spacing="10">
-
+        <StackLayout Padding="10,0,10,10" Spacing="10" x:Name="CurrencySelector">
+            
 
             <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Horizontal">
                 <StackLayout Orientation="Horizontal" Spacing="10">
-                    <Frame Style="{StaticResource ChipFrame}">
-                        <Label Style="{StaticResource ChipLabel}" Text="Turkish Lira" />
+
+                    <Frame Style="{StaticResource ChipFrame}" x:Name="TRYFrame" ClassId="TRYFrame">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="CurrencySelector_Tapped" NumberOfTapsRequired="1"/>
+                        </Frame.GestureRecognizers>
+                        <Label TextColor="#FB8500" Style="{StaticResource ChipLabel}" Text="Turkish Lira" />
                     </Frame>
-                    <Frame Style="{StaticResource ChipFrame}">
+                    <Frame Style="{StaticResource ChipFrame}" x:Name="USDFrame" ClassId="USDFrame">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="CurrencySelector_Tapped" NumberOfTapsRequired="1"/>
+                        </Frame.GestureRecognizers>
                         <Label Style="{StaticResource ChipLabel}" Text="Dollar" />
                     </Frame>
-                    <Frame Style="{StaticResource ChipFrame}">
+                    <Frame Style="{StaticResource ChipFrame}" x:Name="EURFrame" ClassId="EURFrame">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="CurrencySelector_Tapped" NumberOfTapsRequired="1"/>
+                        </Frame.GestureRecognizers>
                         <Label Style="{StaticResource ChipLabel}" Text="Euro" />
                     </Frame>
-                    <Frame Style="{StaticResource ChipFrame}">
+                    <Frame Style="{StaticResource ChipFrame}" x:Name="GBPFrame" ClassId="GBPFrame">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="CurrencySelector_Tapped" NumberOfTapsRequired="1"/>
+                        </Frame.GestureRecognizers>
                         <Label Style="{StaticResource ChipLabel}" Text="Sterlin" />
                     </Frame>
                 </StackLayout>
