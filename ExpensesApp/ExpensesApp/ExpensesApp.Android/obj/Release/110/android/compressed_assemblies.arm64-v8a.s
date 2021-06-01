@@ -17,7 +17,7 @@
 
 	/* 1: ExpensesApp.dll */
 	/* uncompressed_file_size */
-	.word	73216
+	.word	74240
 	/* loaded */
 	.byte	0
 	/* data */
@@ -656,7 +656,7 @@
 
 	/* 72: mscorlib.dll */
 	/* uncompressed_file_size */
-	.word	2124800
+	.word	2125312
 	/* loaded */
 	.byte	0
 	/* data */

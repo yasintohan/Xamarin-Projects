@@ -49,8 +49,11 @@ namespace ExpensesApp
                       Currency = item.Object.Currency
                   }).ToList().OrderByDescending(i => i.Date);
 
+                CurrencyConverter currencyConverter = new CurrencyConverter();
+
                 CollectionViewExpense.ItemsSource = GetExpenses;
-                await App.Current.MainPage.DisplayAlert("Alert", GetExpenses.First().Title, "OK");
+               
+                await App.Current.MainPage.DisplayAlert("Alert", currencyConverter.Converter("TRY", "USD", Convert.ToDouble(GetExpenses.First().Cost)).ToString(), "OK");
             }
             catch (Exception ex)
             {
@@ -87,9 +90,9 @@ namespace ExpensesApp
                Preferences.Set("GBP_TRY", content.GBP_TRY);
                Preferences.Set("USD_TRY", content.USD_TRY);
            } else if(!string.IsNullOrEmpty(Preferences.Get("EUR_TRY", "")) && !string.IsNullOrEmpty(Preferences.Get("GBP_TRY", "")) && !string.IsNullOrEmpty(Preferences.Get("USD_TRY", ""))) {
-               Preferences.Set("EUR_TRY", 10);
-               Preferences.Set("GBP_TRY", 12);
-               Preferences.Set("USD_TRY", 8);
+               Preferences.Set("EUR_TRY", 10.0);
+               Preferences.Set("GBP_TRY", 12.0);
+               Preferences.Set("USD_TRY", 8.0);
            }
 
 
