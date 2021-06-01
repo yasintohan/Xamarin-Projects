@@ -163,4 +163,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\mail.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\refresh.png" />
+  </ItemGroup>
 </Project>

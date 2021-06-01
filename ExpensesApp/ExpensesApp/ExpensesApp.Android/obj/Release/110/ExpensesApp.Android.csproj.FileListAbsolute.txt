@@ -512,3 +512,4 @@ C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\android\assets\LiteDB.dll
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\android\assets\System.Reactive.dll
 C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\other.png
+C:\xamarin_projects\ExpensesApp\ExpensesApp\ExpensesApp.Android\obj\Release\110\res\drawable\refresh.png

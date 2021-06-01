@@ -14465,19 +14465,22 @@ namespace ExpensesApp.Droid
 			public const int Other = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int Rent = 2131165331;
+			public const int refresh = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int settings = 2131165332;
+			public const int Rent = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int test_custom_background = 2131165333;
+			public const int settings = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int tooltip_frame_dark = 2131165334;
+			public const int test_custom_background = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int tooltip_frame_light = 2131165335;
+			public const int tooltip_frame_dark = 2131165335;
+			
+			// aapt resource value: 0x7F070098
+			public const int tooltip_frame_light = 2131165336;
 			
 			static Drawable()
 			{

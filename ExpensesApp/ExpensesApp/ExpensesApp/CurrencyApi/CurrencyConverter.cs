@@ -4,7 +4,16 @@ using System.Text;
 
 namespace ExpensesApp.CurrencyApi
 {
-    class CurrencyConverter
+    public class CurrencyConverter
     {
+
+        public CurrencyConverter()
+        {
+
+        }
+
+
+
+
     }
 }

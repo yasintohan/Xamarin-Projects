@@ -17,14 +17,21 @@
                    Style="{StaticResource HeaderLabel}"
                    Text="Expenses App" 
                    />
-            <Image Source="add" HorizontalOptions="End">
+            <Image Source="refresh" HorizontalOptions="End" WidthRequest="24" HeightRequest="24">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                Tapped="OnImageRefreshTapped"
+                NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Margin="10,0,0,0" Source="add" HorizontalOptions="End" WidthRequest="24" HeightRequest="24">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer
                 Tapped="OnImageAddTapped"
                 NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
-            <Image Margin="10,0,0,0" Source="settings" HorizontalOptions="End">
+            <Image Margin="10,0,0,0" Source="settings" HorizontalOptions="End" WidthRequest="24" HeightRequest="24">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer
                 Tapped="OnImageSettingsTapped"
@@ -88,7 +95,6 @@
             </Frame>
         </Grid>
 
-       
         
         <StackLayout Padding="10,0,10,10" Spacing="10">
 
@@ -118,35 +124,14 @@
                              VerticalOptions="FillAndExpand"
                              >
             
-            <CollectionView Margin="0"
+            <CollectionView
+                        x:Name="CollectionViewExpense"
+                        Margin="0"
                         SelectionChanged="Handle_ItemTapped"
                         SelectionMode="Single"
                         VerticalScrollBarVisibility="Never"
                         ItemSizingStrategy="MeasureAllItems">
-            <CollectionView.ItemsSource>
-                <x:Array Type="{x:Type models:ExpenseModel}">
-                    <models:ExpenseModel Type="bill.png"
-                                      Title="Electric"
-                                      Cost="100.0"
-                                      Currency="USD" />
-                    <models:ExpenseModel Type="bill.png"
-                                      Title="Electricccccccc 1"
-                                      Cost="1400.0"
-                                      Currency="USD" />
-                    <models:ExpenseModel Type="rent.png"
-                                      Title="Electric 2"
-                                      Cost="1200.0"
-                                      Currency="USD" />
-                    <models:ExpenseModel Type="shop.png"
-                                      Title="Electric 3"
-                                      Cost="1500.0"
-                                      Currency="USD" />
-
-                    
-                   
-                    
-                </x:Array>
-            </CollectionView.ItemsSource>
+           
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="5"

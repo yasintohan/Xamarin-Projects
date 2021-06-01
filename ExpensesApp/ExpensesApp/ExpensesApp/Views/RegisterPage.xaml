@@ -12,7 +12,7 @@
                      Padding="20,30,20,30"
                      Orientation="Horizontal"
                      Spacing="20">
-            <Image Source="back" />
+            <Image Source="back"  WidthRequest="32" HeightRequest="32"/>
             <Label Style="{StaticResource AuthorLabel}"
                    Text="back"
                    HorizontalOptions="FillAndExpand" />

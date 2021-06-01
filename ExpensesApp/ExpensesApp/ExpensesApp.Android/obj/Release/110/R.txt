@@ -1414,11 +1414,12 @@ int drawable notification_template_icon_low_bg 0x7f07008f
 int drawable notification_tile_bg 0x7f070090
 int drawable notify_panel_notification_icon_bg 0x7f070091
 int drawable other 0x7f070092
-int drawable rent 0x7f070093
-int drawable settings 0x7f070094
-int drawable test_custom_background 0x7f070095
-int drawable tooltip_frame_dark 0x7f070096
-int drawable tooltip_frame_light 0x7f070097
+int drawable refresh 0x7f070093
+int drawable rent 0x7f070094
+int drawable settings 0x7f070095
+int drawable test_custom_background 0x7f070096
+int drawable tooltip_frame_dark 0x7f070097
+int drawable tooltip_frame_light 0x7f070098
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
