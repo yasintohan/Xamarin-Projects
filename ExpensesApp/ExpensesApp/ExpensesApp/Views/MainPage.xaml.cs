@@ -1,8 +1,10 @@
 ﻿using ExpensesApp.CurrencyApi;
 using ExpensesApp.Models;
 using ExpensesApp.Services;
+using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,7 @@ namespace ExpensesApp
     {
 
         private string baseCurrency = "TRY";
+        public string APIkey = "AIzaSyDR6i14IaHpMZACjSf-ICBwpUmyCpC3DIo";
 
         public string BaseCurrency
         {
@@ -25,9 +28,9 @@ namespace ExpensesApp
         public MainPage()
         {
             GetCurrencies();
-            InitializeComponent();
+            GetProfileInformationAndRefreshToken();
             GetInformations();
-            
+            InitializeComponent();
         }
 
 
@@ -145,6 +148,7 @@ namespace ExpensesApp
         async void OnImageRefreshTapped(object sender, EventArgs args)
         {
             GetInformations();
+            GetProfileInformationAndRefreshToken();
         }
 
         private void CurrencySelector_Tapped(object sender, EventArgs e)
@@ -190,5 +194,74 @@ namespace ExpensesApp
             }
             GetInformations();
         }
+
+
+
+
+
+        async private void GetProfileInformationAndRefreshToken()
+        {
+            var authProvider = new FirebaseAuthProvider(new FirebaseConfig(APIkey));
+            try
+            {
+                var savedfirebaseauth = JsonConvert.DeserializeObject<Firebase.Auth.FirebaseAuth>(Preferences.Get("MyFirebaseRefreshToken", ""));
+                var RefreshedContent = await authProvider.RefreshAuthAsync(savedfirebaseauth);
+
+
+                FirebaseClient fc = new FirebaseClient("https://xamarin-expense-app-default-rtdb.firebaseio.com/");
+                var GetUserModel = (await fc
+                  .Child("Users")
+                  .Child(Preferences.Get("MyFirebaseId", ""))
+                  .OnceAsync<Models.User>()).Select(item => new Models.User
+                  {
+                      localId = item.Object.localId,
+                      firstName = item.Object.firstName,
+                      lastName = item.Object.lastName,
+                      Gender = item.Object.Gender,
+                      email = item.Object.email
+                  }).ToList();
+                Models.User userModel = GetUserModel.First();
+
+
+                Preferences.Set("MyFirebaseRefreshToken", JsonConvert.SerializeObject(RefreshedContent));
+                Preferences.Set("MyFirebaseId", RefreshedContent.User.LocalId);
+                Preferences.Set("MyFirebaseUser", JsonConvert.SerializeObject(userModel));
+                //mailLabel.Text = savedfirebaseauth.User.FirstName;
+
+                switch(userModel.Gender)
+                {
+                    case "Male":
+                        nameLabel.Text = "Mr. ";
+                        break;
+
+                    case "Female":
+                        nameLabel.Text = "Mrs. ";
+                        break;
+                    default:
+                        nameLabel.Text = "";
+                        break;
+                }
+                nameLabel.Text += userModel.lastName;
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                await App.Current.MainPage.DisplayAlert("Alert", "Oh no !  Token expired", "OK");
+            }
+
+
+
+        }
+
+
+
+
+
+
+
     }
 }

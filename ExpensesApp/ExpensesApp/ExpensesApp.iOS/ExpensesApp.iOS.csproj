@@ -167,6 +167,15 @@
     <BundleResource Include="Resources\refresh.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconRound" />
+    <BundleResource Include="Resources\iconRound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\person.png" />
   </ItemGroup>
 </Project>

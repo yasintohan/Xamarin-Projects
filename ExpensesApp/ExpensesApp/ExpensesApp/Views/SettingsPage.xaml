@@ -27,11 +27,41 @@
             <StackLayout Spacing="10" VerticalOptions="FillAndExpand">
 
 
-       
+
                 <StackLayout
                      Orientation="Horizontal"
                      Spacing="20"  Margin="0,0,0,20">
-                    <Image Source="mail" />
+                    <Image Source="person" HeightRequest="28" WidthRequest="28" />
+                    <Label Style="{StaticResource AuthorLabel}"
+                   Text="Name"
+                   HorizontalOptions="FillAndExpand" x:Name="nameLabel"/>
+                </StackLayout>
+
+
+                <StackLayout
+                     Orientation="Horizontal"
+                     Spacing="20"  Margin="0,0,0,20">
+                    <Image Source="person" HeightRequest="28" WidthRequest="28"/>
+                    <Label Style="{StaticResource AuthorLabel}"
+                   Text="Last Name"
+                   HorizontalOptions="FillAndExpand" x:Name="lnamelLabel"/>
+                </StackLayout>
+
+
+                <StackLayout
+                     Orientation="Horizontal"
+                     Spacing="20"  Margin="0,0,0,20">
+                    <Image x:Name="genderImage" Source="gender" HeightRequest="28" WidthRequest="28"/>
+                    <Label Style="{StaticResource AuthorLabel}"
+                   Text="Gender"
+                   HorizontalOptions="FillAndExpand" x:Name="genderLabel"/>
+                </StackLayout>
+
+
+                <StackLayout
+                     Orientation="Horizontal"
+                     Spacing="20"  Margin="0,0,0,20">
+                    <Image Source="mail" HeightRequest="28" WidthRequest="28"/>
                     <Label Style="{StaticResource AuthorLabel}"
                    Text="Mail"
                    HorizontalOptions="FillAndExpand" x:Name="mailLabel"/>
@@ -41,7 +71,7 @@
                      Orientation="Horizontal"
                      Spacing="20"
                              Margin="0,0,0,20">
-                    <Image Source="logout" />
+                    <Image Source="logout" HeightRequest="28" WidthRequest="28"/>
                     <Label Style="{StaticResource AuthorLabel}"
                    Text="Logout"
                    HorizontalOptions="FillAndExpand" />

@@ -42,22 +42,33 @@ namespace ExpensesApp
         {
             Preferences.Remove("MyFirebaseRefreshToken");
             Preferences.Remove("MyFirebaseId");
+            Preferences.Remove("MyFirebaseUser");
             App.Current.MainPage = new LoginPage();
         }
 
 
         async private void GetProfileInformationAndRefreshToken()
         {
-            var authProvider = new FirebaseAuthProvider(new FirebaseConfig(APIkey));
+            
             try
             {
+                var savedfirebaseauth = JsonConvert.DeserializeObject<Models.User>(Preferences.Get("MyFirebaseUser", ""));
+                nameLabel.Text = savedfirebaseauth.firstName;
+                lnamelLabel.Text = savedfirebaseauth.lastName;
+                genderLabel.Text = savedfirebaseauth.Gender;
+                if (savedfirebaseauth.Gender.Equals("Male") || savedfirebaseauth.Gender.Equals("Female"))
+                    genderImage.Source = savedfirebaseauth.Gender;
+                else
+                    genderImage.Source = "Gender";
+                mailLabel.Text = savedfirebaseauth.email;
+                /*
                 var savedfirebaseauth = JsonConvert.DeserializeObject<Firebase.Auth.FirebaseAuth>(Preferences.Get("MyFirebaseRefreshToken", ""));
                 var RefreshedContent = await authProvider.RefreshAuthAsync(savedfirebaseauth);
 
                 Preferences.Set("MyFirebaseRefreshToken", JsonConvert.SerializeObject(RefreshedContent));
                 Preferences.Set("MyFirebaseId", RefreshedContent.User.LocalId);
-                mailLabel.Text = savedfirebaseauth.User.Email;
-
+                mailLabel.Text = savedfirebaseauth.User.FirstName;
+                */
             }
             catch (Exception ex)
             {
