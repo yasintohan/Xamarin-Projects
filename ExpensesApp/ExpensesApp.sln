@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpensesApp.Android", "Expe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpensesApp.iOS", "ExpensesApp\ExpensesApp.iOS\ExpensesApp.iOS.csproj", "{D8DE8270-51B0-40A3-9838-57146A93787F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpensesApp", "ExpensesApp\ExpensesApp\ExpensesApp.csproj", "{323D4E3A-38B3-44BB-A52F-51BFBD3B1A7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpensesApp", "ExpensesApp\ExpensesApp\ExpensesApp.csproj", "{323D4E3A-38B3-44BB-A52F-51BFBD3B1A7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

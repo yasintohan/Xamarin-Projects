@@ -166,4 +166,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\refresh.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconRound" />
+  </ItemGroup>
 </Project>

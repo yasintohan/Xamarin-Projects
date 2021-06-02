@@ -3,16 +3,9 @@ using ExpensesApp.Models;
 using ExpensesApp.Services;
 using Firebase.Database;
 using Firebase.Database.Query;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -23,9 +16,9 @@ namespace ExpensesApp
 
         private string baseCurrency = "TRY";
 
-        public string BaseCurrency 
+        public string BaseCurrency
         {
-            get { return baseCurrency; } 
+            get { return baseCurrency; }
             set { baseCurrency = value; }
         }
 
@@ -33,12 +26,11 @@ namespace ExpensesApp
         {
             GetCurrencies();
             InitializeComponent();
-
-           
             GetInformations();
+            
         }
 
-        
+
         private async void GetInformations()
         {
             try
@@ -77,27 +69,27 @@ namespace ExpensesApp
                 }
                 expensesLabel.Text = Math.Round(totalExpense, 2) + " " + baseCurrency;
                 CollectionViewExpense.ItemsSource = convertedList;
-               
-               
+
+
             }
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Alert", ex.ToString(), "OK");
             }
-           
+
         }
 
 
         async void Handle_ItemTapped(object sender, SelectionChangedEventArgs e)
         {
-           if (e.CurrentSelection.Count == 0)
-           {
-               return;
-           }
+            if (e.CurrentSelection.Count == 0)
+            {
+                return;
+            }
 
           ((CollectionView)sender).SelectedItem = null;
-           var selected = (e.CurrentSelection?.First() as ExpenseModel);
-           await Navigation.PushModalAsync(new DetailPage(selected), true);
+            var selected = (e.CurrentSelection?.First() as ExpenseModel);
+            await Navigation.PushModalAsync(new DetailPage(selected), true);
 
         }
 
@@ -107,18 +99,20 @@ namespace ExpensesApp
         async void GetCurrencies()
         {
 
-           var content = await CurrencyService.ServiceClientInstance.GetCurrencyAsync();
+            var content = await CurrencyService.ServiceClientInstance.GetCurrencyAsync();
 
-           if(content != null)
-           {
-               Preferences.Set("EUR_TRY", content.EUR_TRY);
-               Preferences.Set("GBP_TRY", content.GBP_TRY);
-               Preferences.Set("USD_TRY", content.USD_TRY);
-           } else if(!string.IsNullOrEmpty(Preferences.Get("EUR_TRY", "")) && !string.IsNullOrEmpty(Preferences.Get("GBP_TRY", "")) && !string.IsNullOrEmpty(Preferences.Get("USD_TRY", ""))) {
-               Preferences.Set("EUR_TRY", 10.0);
-               Preferences.Set("GBP_TRY", 12.0);
-               Preferences.Set("USD_TRY", 8.0);
-           }
+            if (content != null)
+            {
+                Preferences.Set("EUR_TRY", content.EUR_TRY);
+                Preferences.Set("GBP_TRY", content.GBP_TRY);
+                Preferences.Set("USD_TRY", content.USD_TRY);
+            }
+            else if (!string.IsNullOrEmpty(Preferences.Get("EUR_TRY", "")) && !string.IsNullOrEmpty(Preferences.Get("GBP_TRY", "")) && !string.IsNullOrEmpty(Preferences.Get("USD_TRY", "")))
+            {
+                Preferences.Set("EUR_TRY", 10.0);
+                Preferences.Set("GBP_TRY", 12.0);
+                Preferences.Set("USD_TRY", 8.0);
+            }
 
 
         }
@@ -155,10 +149,8 @@ namespace ExpensesApp
 
         private void CurrencySelector_Tapped(object sender, EventArgs e)
         {
-            
-            var btn = (Frame)sender;
            
-
+            var btn = (Frame)sender;
             switch (btn.ClassId)
             {
                 case "TRYFrame":

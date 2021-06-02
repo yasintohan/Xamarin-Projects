@@ -1,28 +1,23 @@
-﻿using ExpensesApp.Models;
-using Firebase.Auth;
+﻿using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace ExpensesApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RegisterPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class RegisterPage : ContentPage
+    {
 
         private double _pageHeight;
         public string APIkey = "AIzaSyDR6i14IaHpMZACjSf-ICBwpUmyCpC3DIo";
 
-        public RegisterPage ()
-		{
-			InitializeComponent ();
+        public RegisterPage()
+        {
+            InitializeComponent();
             genderPicker.Items.Add("Male");
             genderPicker.Items.Add("Female");
             genderPicker.Items.Add("Other");
@@ -74,6 +69,6 @@ namespace ExpensesApp
             }
         }
 
-       
+
     }
 }

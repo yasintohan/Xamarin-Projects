@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Essentials;
 
 namespace ExpensesApp.CurrencyApi
@@ -15,7 +13,7 @@ namespace ExpensesApp.CurrencyApi
             double baseRate = 1;
             double targetRate = 8;
 
-            
+
             switch (baseCurrency)
             {
                 case "EUR":
@@ -31,7 +29,7 @@ namespace ExpensesApp.CurrencyApi
                     baseRate = Convert.ToDouble(Preferences.Get("GBP_TRY", 12.0));
                     break;
                 default:
-                    baseRate = 1; 
+                    baseRate = 1;
                     break;
             }
 

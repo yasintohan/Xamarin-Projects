@@ -2,10 +2,6 @@
 using Firebase.Database;
 using Firebase.Database.Query;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -47,7 +43,7 @@ namespace ExpensesApp
         {
             try
             {
-                if(!titleEntry.Text.Equals("") && !costEntry.Text.Equals(""))
+                if (!titleEntry.Text.Equals("") && !costEntry.Text.Equals(""))
                 {
                     FirebaseClient fc = new FirebaseClient("https://xamarin-expense-app-default-rtdb.firebaseio.com/");
                     var result = await fc
@@ -57,13 +53,13 @@ namespace ExpensesApp
                     titleEntry.Text = "";
                     costEntry.Text = "";
                     await App.Current.MainPage.DisplayAlert("Alert", "Succesfully added", "OK");
-                } 
+                }
             }
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
             }
-            
+
         }
 
         private void setupPickers()

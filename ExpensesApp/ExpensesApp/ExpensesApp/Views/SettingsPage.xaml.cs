@@ -1,10 +1,6 @@
 ﻿using Firebase.Auth;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -57,7 +53,7 @@ namespace ExpensesApp
             {
                 var savedfirebaseauth = JsonConvert.DeserializeObject<Firebase.Auth.FirebaseAuth>(Preferences.Get("MyFirebaseRefreshToken", ""));
                 var RefreshedContent = await authProvider.RefreshAuthAsync(savedfirebaseauth);
-                
+
                 Preferences.Set("MyFirebaseRefreshToken", JsonConvert.SerializeObject(RefreshedContent));
                 Preferences.Set("MyFirebaseId", RefreshedContent.User.LocalId);
                 mailLabel.Text = savedfirebaseauth.User.Email;

@@ -3,9 +3,7 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:panCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             xmlns:rainbows="clr-namespace:Xamarin.Forms.DebugRainbows;assembly=Xamarin.Forms.DebugRainbows"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             rainbows:DebugRainbow.IsDebug="False"
               BackgroundColor="#219EBC">
     <StackLayout VerticalOptions="FillAndExpand">
         <StackLayout x:Name="header"
@@ -41,8 +39,8 @@
                 <Entry x:Name="mailEntry" Placeholder="Mail" />
                 <Entry x:Name="passwordEntry" Placeholder="Password" />
 
-                
-                <Button Clicked="registerBtn_Clicked" Margin="10" x:Name="registerBtn" Text="Register" />
+
+                <Button Clicked="registerBtn_Clicked" Margin="10" x:Name="registerBtn" Text="Register"  Background="#FB8500"/>
 
             </StackLayout>
         </panCake:PancakeView>

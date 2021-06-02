@@ -15,6 +15,8 @@
                              >
                 <StackLayout Spacing="10"  VerticalOptions="Center">
 
+                    <Image Source="iconRound" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100" />
+                    
                     <Label HorizontalOptions="Center"
                    Style="{StaticResource HeaderLabel}"
                    Text="Expenses App" 
@@ -23,12 +25,12 @@
                    Style="{StaticResource AuthorLabel}"
                    Text="Login" 
                    />
-
+                    
                     <Entry x:Name="loginmailEntry" Placeholder="Mail" />
                     <Entry x:Name="loginpasswordEntry" Placeholder="Password" />
 
 
-                    <Button Clicked="loginBtn_Clicked" Margin="10" x:Name="loginBtn" Text="Login" />
+                    <Button Clicked="loginBtn_Clicked" Margin="10" x:Name="loginBtn" Text="Login" Background="#FB8500"/>
 
                     <StackLayout x:Name="register"
                      Padding="20,30,20,30"
