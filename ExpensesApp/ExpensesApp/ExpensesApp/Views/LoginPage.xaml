@@ -27,7 +27,7 @@
                    />
                     
                     <Entry x:Name="loginmailEntry" Placeholder="Mail" />
-                    <Entry x:Name="loginpasswordEntry" Placeholder="Password" />
+                    <Entry x:Name="loginpasswordEntry" Placeholder="Password"  IsPassword="True"/>
 
 
                     <Button Clicked="loginBtn_Clicked" Margin="10" x:Name="loginBtn" Text="Login" Background="#FB8500"/>

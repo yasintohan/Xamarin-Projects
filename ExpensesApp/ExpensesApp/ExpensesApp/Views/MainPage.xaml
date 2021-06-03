@@ -160,10 +160,10 @@
                             HeightRequest="80"
                             BackgroundColor="Transparent"
                             ColumnSpacing="20"
-                            RowSpacing="8">
+                            RowSpacing="8"
+                         >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
-                           
 
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
@@ -175,24 +175,24 @@
                         
                             <Image  Grid.Row="0"
                                 Grid.Column="0"
-                                 Aspect="AspectFit" Source="{Binding Type}" />
+                                 Aspect="AspectFit" Source="{Binding Type}" VerticalOptions="Center" />
 
                             <Label Grid.Row="0"
                                 Grid.Column="1"
                                 Style="{StaticResource HeaderLabel}"
-                                Text="{Binding Title}" />
+                                Text="{Binding Title}" VerticalOptions="Center" />
                         
                             <Label Grid.Row="0"
                                 Grid.Column="2"
                                 Style="{StaticResource AuthorLabel}"
                                 Text="{Binding Cost}"
                                 HorizontalOptions="End"
-                                   x:Name="costLabel"/>
+                                   x:Name="costLabel" VerticalOptions="Center"/>
                         
                             <Label Grid.Row="0"
                                 Grid.Column="3"
                                 Style="{StaticResource AuthorLabel}"
-                                Text="{Binding Currency}"
+                                Text="{Binding Currency}" VerticalOptions="Center"
                                 />
                         
                     </Grid>

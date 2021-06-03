@@ -1,5 +1,8 @@
 ﻿using ExpensesApp.Models;
-
+using Firebase.Database;
+using Firebase.Database.Query;
+using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,6 +23,7 @@ namespace ExpensesApp
             titlelabel.Text = expenseModel.Title;
             costlabel.Text = expenseModel.Cost;
             currencylabel.Text = expenseModel.Currency;
+           
         }
 
         protected override async void OnAppearing()
@@ -42,5 +46,31 @@ namespace ExpensesApp
             await Navigation.PopModalAsync();
         }
 
+        private async void deleteBtn_Clicked(object sender, System.EventArgs e)
+        {
+
+            try
+            {
+                var answer = await DisplayAlert("Delete Message", "Do you wan't to delete the exoense?", "Yes", "No");
+                if (answer)
+                {
+                    var firebase = new FirebaseClient("https://xamarin-expense-app-default-rtdb.firebaseio.com/");
+                    await firebase.Child("Expenses").Child(Preferences.Get("MyFirebaseId", "")).Child(expenseModel.ExpenseId).DeleteAsync();
+                    await Navigation.PopModalAsync();
+                }
+                else
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
+            }
+
+           
+            
+           
+        }
     }
 }

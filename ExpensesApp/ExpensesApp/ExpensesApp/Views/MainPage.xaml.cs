@@ -32,7 +32,12 @@ namespace ExpensesApp
             GetInformations();
             InitializeComponent();
         }
-
+        protected override void OnAppearing()
+        {
+            GetCurrencies();
+            GetProfileInformationAndRefreshToken();
+            GetInformations();
+        }
 
         private async void GetInformations()
         {
@@ -42,10 +47,11 @@ namespace ExpensesApp
 
                 FirebaseClient fc = new FirebaseClient("https://xamarin-expense-app-default-rtdb.firebaseio.com/");
                 var GetExpenses = (await fc
-                  .Child("Expences")
+                  .Child("Expenses")
                   .Child(Preferences.Get("MyFirebaseId", ""))
                   .OnceAsync<ExpenseModel>()).Select(item => new ExpenseModel
                   {
+                      ExpenseId = item.Key,
                       Date = item.Object.Date,
                       Title = item.Object.Title,
                       Cost = item.Object.Cost,
@@ -61,6 +67,7 @@ namespace ExpensesApp
                 {
                     ExpenseModel newModel = new ExpenseModel
                     {
+                        ExpenseId = model.ExpenseId,
                         Date = model.Date,
                         Title = model.Title,
                         Cost = Math.Round(currencyConverter.Converter(model.Currency, baseCurrency, Convert.ToDouble(model.Cost)), 2).ToString(),

@@ -2,6 +2,7 @@
 using Firebase.Database;
 using Firebase.Database.Query;
 using System;
+using System.Linq;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -47,9 +48,9 @@ namespace ExpensesApp
                 {
                     FirebaseClient fc = new FirebaseClient("https://xamarin-expense-app-default-rtdb.firebaseio.com/");
                     var result = await fc
-                     .Child("Expences")
+                     .Child("Expenses")
                      .Child(Preferences.Get("MyFirebaseId", ""))
-                     .PostAsync(new ExpenseModel() { Date = DateTime.Now, Title = titleEntry.Text, Cost = costEntry.Text, Type = typePicker.Items[typePicker.SelectedIndex], Currency = currencyPicker.Items[currencyPicker.SelectedIndex] });
+                     .PostAsync(new ExpenseModel() { ExpenseId = RandomString(20), Date = DateTime.Now, Title = titleEntry.Text, Cost = costEntry.Text, Type = typePicker.Items[typePicker.SelectedIndex], Currency = currencyPicker.Items[currencyPicker.SelectedIndex] });
                     titleEntry.Text = "";
                     costEntry.Text = "";
                     await App.Current.MainPage.DisplayAlert("Alert", "Succesfully added", "OK");
@@ -74,6 +75,14 @@ namespace ExpensesApp
             currencyPicker.Items.Add("EUR");
             currencyPicker.Items.Add("GBP");
             currencyPicker.SelectedIndex = 0;
+        }
+
+        private static Random random = new Random();
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
         }
     }
 }

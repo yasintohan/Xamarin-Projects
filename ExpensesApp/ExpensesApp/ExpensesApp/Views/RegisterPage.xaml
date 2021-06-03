@@ -37,7 +37,7 @@
                 <Picker x:Name="genderPicker"></Picker>
                 
                 <Entry x:Name="mailEntry" Placeholder="Mail" />
-                <Entry x:Name="passwordEntry" Placeholder="Password" />
+                <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True"/>
 
 
                 <Button Clicked="registerBtn_Clicked" Margin="10" x:Name="registerBtn" Text="Register"  Background="#FB8500"/>

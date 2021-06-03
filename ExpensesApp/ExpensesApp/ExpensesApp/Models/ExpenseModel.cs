@@ -4,6 +4,7 @@ namespace ExpensesApp.Models
 {
     public class ExpenseModel
     {
+        public string ExpenseId { get; set; }
         public DateTime Date { get; set; }
         public string Title { get; set; }
         public string Cost { get; set; }
