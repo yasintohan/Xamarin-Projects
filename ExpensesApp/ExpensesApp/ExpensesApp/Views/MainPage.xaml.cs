@@ -118,11 +118,11 @@ namespace ExpensesApp
             }
             else if (!string.IsNullOrEmpty(Preferences.Get("EUR", "")) && !string.IsNullOrEmpty(Preferences.Get("GBP", "")) && !string.IsNullOrEmpty(Preferences.Get("USD", "")) && !string.IsNullOrEmpty(Preferences.Get("TRY", "")))
             {
-                Preferences.Set("BASE_CURRENCY", "TRY");
-                Preferences.Set("EUR", 10.0);
-                Preferences.Set("GBP", 12.0);
-                Preferences.Set("USD", 8.0);
-                Preferences.Set("TRY", 1.0);
+                Preferences.Set("BASE_CURRENCY", "EUR");
+                Preferences.Set("EUR", 1.0);
+                Preferences.Set("GBP", 0.861772);
+                Preferences.Set("USD", 1.220376);
+                Preferences.Set("TRY", 10.487426);
             }
 
 

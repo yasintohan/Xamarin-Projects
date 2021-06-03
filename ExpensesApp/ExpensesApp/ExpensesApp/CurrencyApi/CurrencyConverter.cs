@@ -11,7 +11,7 @@ namespace ExpensesApp.CurrencyApi
         {
             double convertedValue = 0;
             double baseRate = 1;
-            double targetRate = 8;
+            double targetRate = 1;
 
             baseRate = Convert.ToDouble(Preferences.Get(baseCurrency, 1.0));
             targetRate = Convert.ToDouble(Preferences.Get(targetCurrency, 1.0));
