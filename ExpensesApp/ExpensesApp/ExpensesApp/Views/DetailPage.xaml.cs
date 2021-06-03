@@ -56,7 +56,7 @@ namespace ExpensesApp
                 if (answer)
                 {
                     var firebase = new FirebaseClient("https://xamarin-expense-app-default-rtdb.firebaseio.com/");
-                    await firebase.Child("Expenses").Child(Preferences.Get("MyFirebaseId", "")).Child(expenseModel.ExpenseId).DeleteAsync();
+                    await firebase.Child("Expenses").Child(Preferences.Get("MyFirebaseId", "")).Child(ExpenseId).DeleteAsync();
                     await Navigation.PopModalAsync();
                 }
                 else
@@ -80,6 +80,7 @@ namespace ExpensesApp
             try
             {
                 expenseModel = (await firebase.Child("Expenses").Child(Preferences.Get("MyFirebaseId", "")).Child(ExpenseId).OnceSingleAsync<ExpenseModel>());
+                expenseModel.ExpenseId = ExpenseId;
                 typeImage.Source = expenseModel.Type;
                 titlelabel.Text = expenseModel.Title;
                 costlabel.Text = expenseModel.Cost;
