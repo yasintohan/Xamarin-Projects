@@ -178,4 +178,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\person.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\edit.png" />
+  </ItemGroup>
 </Project>

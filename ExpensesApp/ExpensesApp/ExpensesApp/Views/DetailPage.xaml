@@ -19,17 +19,24 @@
         </StackLayout>
         <panCake:PancakeView x:Name="cakeDetail"
                              Margin="0"
-                             Padding="50"
                              BackgroundColor="#ffffff"
                              CornerRadius="30,30,0,0"
                              VerticalOptions="FillAndExpand"
                              >
             <StackLayout Spacing="10" VerticalOptions="FillAndExpand">
+                <Image Margin="16" x:Name="editImage" Aspect="AspectFit" Source="edit.png" VerticalOptions="Start" HorizontalOptions="End">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="OnImageEditTapped"
+                NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+
                 <Image Margin="50" x:Name="typeImage" Aspect="AspectFit" Source="bill.png" />
                 <Label Margin="10" x:Name="titlelabel" Style="{StaticResource HeaderLabel}" Text="Julie Zhuo"  HorizontalOptions="Center" />
                 <Label Margin="10" x:Name="costlabel" Style="{StaticResource HeaderLabel}" Text="100"  HorizontalOptions="Center" />
                 <Label Margin="10" x:Name="currencylabel" Style="{StaticResource HeaderLabel}" Text="USD"  HorizontalOptions="Center" />
-                <Button Margin="10" Clicked="deleteBtn_Clicked" x:Name="deleteBtn" Text="Delete" Background="#FB8500"/>
+                <Button Margin="50,10,50,10" Clicked="deleteBtn_Clicked" x:Name="deleteBtn" Text="Delete" Background="#FB8500"/>
 
             </StackLayout>
         </panCake:PancakeView>

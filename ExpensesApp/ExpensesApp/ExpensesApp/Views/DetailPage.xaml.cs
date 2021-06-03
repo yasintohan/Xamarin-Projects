@@ -1,4 +1,5 @@
 ﻿using ExpensesApp.Models;
+using ExpensesApp.Views;
 using Firebase.Database;
 using Firebase.Database.Query;
 using System;
@@ -14,20 +15,20 @@ namespace ExpensesApp
 
         private double _pageHeight;
         private ExpenseModel expenseModel;
-
-        public DetailPage(ExpenseModel expenseModel)
+        private FirebaseClient firebase;
+        private string ExpenseId;
+        public DetailPage(string ExpenseId)
         {
-            this.expenseModel = expenseModel;
+            this.ExpenseId = ExpenseId;
             InitializeComponent();
-            typeImage.Source = expenseModel.Type;
-            titlelabel.Text = expenseModel.Title;
-            costlabel.Text = expenseModel.Cost;
-            currencylabel.Text = expenseModel.Currency;
-           
+            firebase = new FirebaseClient("https://xamarin-expense-app-default-rtdb.firebaseio.com/");
+            getInformations();
+
         }
 
         protected override async void OnAppearing()
         {
+            getInformations();
             await cakeDetail.TranslateTo(0, header.Y, 500, Easing.SinOut);
             await header.FadeTo(1);
             base.OnAppearing();
@@ -71,6 +72,31 @@ namespace ExpensesApp
            
             
            
+        }
+
+        private async void getInformations()
+        {
+            
+            try
+            {
+                expenseModel = (await firebase.Child("Expenses").Child(Preferences.Get("MyFirebaseId", "")).Child(ExpenseId).OnceSingleAsync<ExpenseModel>());
+                typeImage.Source = expenseModel.Type;
+                titlelabel.Text = expenseModel.Title;
+                costlabel.Text = expenseModel.Cost;
+                currencylabel.Text = expenseModel.Currency;
+
+
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
+            }
+
+        }
+
+        private async void OnImageEditTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new UpdatePage(expenseModel), true);
         }
     }
 }

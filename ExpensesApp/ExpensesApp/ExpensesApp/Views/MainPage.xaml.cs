@@ -99,7 +99,7 @@ namespace ExpensesApp
 
           ((CollectionView)sender).SelectedItem = null;
             var selected = (e.CurrentSelection?.First() as ExpenseModel);
-            await Navigation.PushModalAsync(new DetailPage(selected), true);
+            await Navigation.PushModalAsync(new DetailPage(selected.ExpenseId), true);
 
         }
 
