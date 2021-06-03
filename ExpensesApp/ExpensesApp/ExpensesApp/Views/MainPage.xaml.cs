@@ -27,9 +27,6 @@ namespace ExpensesApp
 
         public MainPage()
         {
-            GetCurrencies();
-            GetProfileInformationAndRefreshToken();
-            GetInformations();
             InitializeComponent();
         }
         protected override void OnAppearing()
@@ -113,15 +110,19 @@ namespace ExpensesApp
 
             if (content != null)
             {
-                Preferences.Set("EUR_TRY", content.EUR_TRY);
-                Preferences.Set("GBP_TRY", content.GBP_TRY);
-                Preferences.Set("USD_TRY", content.USD_TRY);
+                Preferences.Set("BASE_CURRENCY", content.baseCurrency);
+                Preferences.Set("EUR", content.rates.EUR);
+                Preferences.Set("GBP", content.rates.GBP);
+                Preferences.Set("USD", content.rates.USD);
+                Preferences.Set("TRY", content.rates.TRY);
             }
-            else if (!string.IsNullOrEmpty(Preferences.Get("EUR_TRY", "")) && !string.IsNullOrEmpty(Preferences.Get("GBP_TRY", "")) && !string.IsNullOrEmpty(Preferences.Get("USD_TRY", "")))
+            else if (!string.IsNullOrEmpty(Preferences.Get("EUR", "")) && !string.IsNullOrEmpty(Preferences.Get("GBP", "")) && !string.IsNullOrEmpty(Preferences.Get("USD", "")) && !string.IsNullOrEmpty(Preferences.Get("TRY", "")))
             {
-                Preferences.Set("EUR_TRY", 10.0);
-                Preferences.Set("GBP_TRY", 12.0);
-                Preferences.Set("USD_TRY", 8.0);
+                Preferences.Set("BASE_CURRENCY", "TRY");
+                Preferences.Set("EUR", 10.0);
+                Preferences.Set("GBP", 12.0);
+                Preferences.Set("USD", 8.0);
+                Preferences.Set("TRY", 1.0);
             }
 
 
@@ -154,8 +155,9 @@ namespace ExpensesApp
 
         async void OnImageRefreshTapped(object sender, EventArgs args)
         {
-            GetInformations();
+            GetCurrencies();
             GetProfileInformationAndRefreshToken();
+            GetInformations();
         }
 
         private void CurrencySelector_Tapped(object sender, EventArgs e)

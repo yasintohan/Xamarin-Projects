@@ -13,46 +13,12 @@ namespace ExpensesApp.CurrencyApi
             double baseRate = 1;
             double targetRate = 8;
 
+            baseRate = Convert.ToDouble(Preferences.Get(baseCurrency, 1.0));
+            targetRate = Convert.ToDouble(Preferences.Get(targetCurrency, 1.0));
 
-            switch (baseCurrency)
-            {
-                case "EUR":
-                    baseRate = Convert.ToDouble(Preferences.Get("EUR_TRY", 10.0));
-                    break;
-                case "USD":
-                    baseRate = Convert.ToDouble(Preferences.Get("USD_TRY", 8.0));
-                    break;
-                case "TRY":
-                    baseRate = 1;
-                    break;
-                case "GBP":
-                    baseRate = Convert.ToDouble(Preferences.Get("GBP_TRY", 12.0));
-                    break;
-                default:
-                    baseRate = 1;
-                    break;
-            }
+            
 
-            switch (targetCurrency)
-            {
-                case "EUR":
-                    targetRate = Convert.ToDouble(Preferences.Get("EUR_TRY", 10.0));
-                    break;
-                case "USD":
-                    targetRate = Convert.ToDouble(Preferences.Get("USD_TRY", 8.0));
-                    break;
-                case "TRY":
-                    targetRate = 1;
-                    break;
-                case "GBP":
-                    targetRate = Convert.ToDouble(Preferences.Get("GBP_TRY", 12.0));
-                    break;
-                default:
-                    targetRate = 1;
-                    break;
-            }
-
-            convertedValue = value * baseRate / targetRate;
+            convertedValue = value / baseRate * targetRate;
 
 
             return convertedValue;

@@ -35,27 +35,16 @@ namespace ExpensesApp.Services
             {
                 var content = "";
                 HttpClient myClient = new HttpClient();
-                var uri = new Uri("https://free.currconv.com/api/v7/convert?q=EUR_TRY&compact=ultra&apiKey=39a34f884814db8f612d");
+                var uri = new Uri("https://api.exchangerate.host/latest");
                 var response = await myClient.GetAsync(uri);
-                if (response.IsSuccessStatusCode)
-                    content = await response.Content.ReadAsStringAsync();
-                uri = new Uri("https://free.currconv.com/api/v7/convert?q=USD_TRY&compact=ultra&apiKey=39a34f884814db8f612d");
-                response = await myClient.GetAsync(uri);
-                if (response.IsSuccessStatusCode)
-                    content += await response.Content.ReadAsStringAsync();
-                uri = new Uri("https://free.currconv.com/api/v7/convert?q=GBP_TRY&compact=ultra&apiKey=39a34f884814db8f612d");
-                response = await myClient.GetAsync(uri);
-                if (response.IsSuccessStatusCode)
-                    content += await response.Content.ReadAsStringAsync();
-
-                content = content.Replace("}{", " , ");
+                content = await response.Content.ReadAsStringAsync();
                 var Item = JsonConvert.DeserializeObject<Currency>(content);
                 return Item;
 
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert("Alert", "Something went wrong. Please check Internet connection.", "ok");
+                await App.Current.MainPage.DisplayAlert("Alert", ex.ToString(), "ok");
                 return null;
             }
         }
